@@ -1,26 +1,44 @@
-import React, { Component } from 'react'
-import Html5QrcodePlugin from './Html5QrcodePlugin';
-class App extends Component {
-  constructor(props) {
-      super(props);
+import React, { useEffect } from "react";
+import { isAndroid, isIOS } from "react-device-detect";
 
-      // This binding is necessary to make `this` work in the callback.
-      this.onNewScanResult = this.onNewScanResult.bind(this);
-  }
+const App = () => {
+  useEffect(() => {
+    if (isAndroid) {
+      const url =
+        "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end";
 
-  render() {
-      return (<div>
-          <h1>ali ikd qr</h1>
-          <Html5QrcodePlugin 
-              fps={10}
-              qrbox={250}
-              disableFlip={false}
-              qrCodeSuccessCallback={this.onNewScanResult}/>
-      </div>);
-  }
+      window.location.replace(url);
+    } else if (isIOS) {
+      window.location.replace("instagram://");
 
-  onNewScanResult(decodedText, decodedResult) {
-      // Handle the result here.
-  }
-}
-export { App }
+      setTimeout(() => {
+        window.location.replace(
+          "https://apps.apple.com/us/app/instagram/id389801252"
+        );
+      }, 10000);
+    } else {
+      window.location.replace("https://instagram.com");
+    }
+  }, []);
+
+  return (
+    <div className="App">
+      <div>
+        If you have not been automatically redirected, click on the following link:
+      </div>
+      {isAndroid ? (
+        <a href="https://play.google.com/store/apps/details?id=com.instagram.android">
+          Open Android app
+        </a>
+      ) : isIOS ? (
+        <a href="https://apps.apple.com/us/app/instagram/id389801252">
+          Open iOS app
+        </a>
+      ) : (
+        <a href="https://instagram.com">Open Web app</a>
+      )}
+    </div>
+  );
+};
+
+export default App;

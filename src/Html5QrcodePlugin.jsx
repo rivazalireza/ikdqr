@@ -3,11 +3,13 @@
 import { Html5QrcodeScanner } from "html5-qrcode";
 import React from 'react';
 
-const qrcodeRegionId = "html5qr-code-full-region";
+const qrcodeRegionId = "html5qr-code-full-regionr";
 
 class Html5QrcodePlugin extends React.Component {
     render() {
-        return <div id={qrcodeRegionId} />;
+        return <div id={qrcodeRegionId} >
+            
+        </div>;
     }
 
     componentWillUnmount() {
