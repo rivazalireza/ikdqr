@@ -5,7 +5,7 @@ const App = () => {
   useEffect(() => {
     if (isAndroid) {
       const url =
-        "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end";
+        "https://cafebazaar.ir/app/tw.mobileapp.qrcode.banner?l=en";
 
       window.location.replace(url);
     } else if (isIOS) {
@@ -27,7 +27,7 @@ const App = () => {
         If you have not been automatically redirected, click on the following link:
       </div>
       {isAndroid ? (
-        <a href="https://play.google.com/store/apps/details?id=com.instagram.android">
+        <a href="https://play.google.com/store/apps/details?id=com.gamma.scan&hl=en&gl=US">
           Open Android app
         </a>
       ) : isIOS ? (
