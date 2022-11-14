@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/ikdqr/static/js/main.c021f9de.js",
+    "main.js": "/ikdqr/static/js/main.f657397a.js",
     "static/js/787.2d99534f.chunk.js": "/ikdqr/static/js/787.2d99534f.chunk.js",
     "index.html": "/ikdqr/index.html",
-    "main.c021f9de.js.map": "/ikdqr/static/js/main.c021f9de.js.map",
+    "main.f657397a.js.map": "/ikdqr/static/js/main.f657397a.js.map",
     "787.2d99534f.chunk.js.map": "/ikdqr/static/js/787.2d99534f.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.c021f9de.js"
+    "static/js/main.f657397a.js"
   ]
 }
