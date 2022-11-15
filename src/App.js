@@ -1,44 +1,27 @@
-import React, { useEffect } from "react";
-import { isAndroid, isIOS } from "react-device-detect";
 
-const App = () => {
-  useEffect(() => {
-    if (isAndroid) {
-      const url =
-      "intent://qrcode-tiger.com/#Intent;scheme=https;package=com.qrtiger;end";
+import Html5QrcodePlugin from "./Html5QrcodePlugin";
+import React from 'react';
 
-      window.location.replace(url);
-    } else if (isIOS) {
-      window.location.replace("instagram://");
+class App extends React.Component {
+  constructor(props) {
+      super(props);
 
-      setTimeout(() => {
-        window.location.replace(
-          "https://apps.apple.com/us/app/instagram/id389801252"
-        );
-      }, 10000);
-    } else {
-      window.location.replace("https://instagram.com");
-    }
-  }, []);
+      // This binding is necessary to make `this` work in the callback.
+      this.onNewScanResult = this.onNewScanResult.bind(this);
+  }
 
-  return (
-    <div className="App">
-      <div>
-    alireza rivaz
-      </div>
-      {isAndroid ? (
-        <a href="https://play.google.com/store/apps/details?id=com.qrtiger&hl=en&gl=US">
-          Open Android app
-        </a>
-      ) : isIOS ? (
-        <a href="https://apps.apple.com/us/app/instagram/id389801252">
-          Open iOS app
-        </a>
-      ) : (
-        <a href="https://instagram.com">Open Web app</a>
-      )}
-    </div>
-  );
-};
+  render() {
+      return (<div>
+          <h1>Html5Qrcode React example!</h1>
+          <Html5QrcodePlugin 
+              fps={10}
+              qrbox={250}
+              disableFlip={false}
+              qrCodeSuccessCallback={this.onNewScanResult}/>
+      </div>);
+  }
 
-export default App;
+  onNewScanResult(decodedText, decodedResult) {
+      // Handle the result here.
+  }
+} export default App;
