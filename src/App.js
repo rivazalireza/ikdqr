@@ -24,10 +24,10 @@ const App = () => {
   return (
     <div className="App">
       <div>
-        If you have not been automatirrrtrcally redirected, click on the following link:
+        If you have not been automatirrrtrcally alireza redirected, click on the following link:
       </div>
       {isAndroid ? (
-        <a href="https://play.google.com/store/apps/details?id=com.instagram.android">
+        <a href="https://play.google.com/store/apps/details?id=com.qrtiger&hl=en&gl=US">
           Open Android app
         </a>
       ) : isIOS ? (
