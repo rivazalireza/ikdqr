@@ -1,11 +1,16 @@
 import React, { useEffect } from "react";
 import { isAndroid, isIOS } from "react-device-detect";
 
+
+
 const App = () => {
+
+
+
   useEffect(() => {
     if (isAndroid) {
       const url =
-        "https://cafebazaar.ir/app/tw.mobileapp.qrcode.banner?l=en";
+        "#Intent;scheme=QR code Reader;end";
 
       window.location.replace(url);
     } else if (isIOS) {
@@ -27,7 +32,7 @@ const App = () => {
         If you have not been automatically redirected, click on the following link:
       </div>
       {isAndroid ? (
-        <a href="https://play.google.com/store/apps/details?id=com.gamma.scan&hl=en&gl=US">
+        <a href="https://play.google.com/store/apps/details?id=com.instagram.android">
           Open Android app
         </a>
       ) : isIOS ? (
