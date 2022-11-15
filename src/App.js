@@ -1,16 +1,11 @@
 import React, { useEffect } from "react";
 import { isAndroid, isIOS } from "react-device-detect";
 
-
-
 const App = () => {
-
-
-
   useEffect(() => {
     if (isAndroid) {
       const url =
-        "#Intent;scheme=QR code Reader;end";
+      "intent://qrcode-tiger.com/#Intent;scheme=https;package=com.qrtiger;end";
 
       window.location.replace(url);
     } else if (isIOS) {
@@ -29,7 +24,7 @@ const App = () => {
   return (
     <div className="App">
       <div>
-        If you have not been automatically redirected, click on the following link:
+        If you have not been automatirrrtrcally redirected, click on the following link:
       </div>
       {isAndroid ? (
         <a href="https://play.google.com/store/apps/details?id=com.instagram.android">
@@ -40,7 +35,7 @@ const App = () => {
           Open iOS app
         </a>
       ) : (
-        <a href="https://instagram.com">Open Web application mobile</a>
+        <a href="https://instagram.com">Open Web app</a>
       )}
     </div>
   );
