@@ -40,7 +40,7 @@ const App = () => {
           Open iOS app
         </a>
       ) : (
-        <a href="https://instagram.com">Open Web app</a>
+        <a href="https://instagram.com">Open Web application mobile</a>
       )}
     </div>
   );
