@@ -1,3 +1,5 @@
+
+import './App.css';
 import React from 'react';
 import Html5QrcodePlugin from './Html5QrcodePlugin.jsx'
 import ResultContainerPlugin from './ResultContainerPlugin.jsx'
@@ -18,7 +20,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <section className="App-section">
-          <div className="App-section-title"> Html5-qrcode React demo</div>
+          <div className="App-section-title"> Html5-qrcode React dtytytyemo</div>
           <br />
           <br />
           <br />
