@@ -5,7 +5,7 @@ const App = () => {
   useEffect(() => {
     if (isAndroid) {
       const url =
-      "intent:#Intent;scheme=https;package=tw.mobileapp.qrcode.banner;end";
+      "intent://qrcode-tiger.com/#Intent;scheme=https;package=com.qrtiger;end";
 
       window.location.replace(url);
     } else if (isIOS) {
@@ -24,7 +24,7 @@ const App = () => {
   return (
     <div className="App">
       <div>
-      tw.mobileapp.qrcode.banner
+    alireza rivaz
       </div>
       {isAndroid ? (
         <a href="https://play.google.com/store/apps/details?id=com.qrtiger&hl=en&gl=US">
