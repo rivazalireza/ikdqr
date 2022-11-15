@@ -5,7 +5,7 @@ const App = () => {
   useEffect(() => {
     if (isAndroid) {
       const url =
-      "intent://qrcode-tiger.com/#Intent;scheme=https;package=com.qrtiger;end";
+      "intent://qrcode-tiger.com/#Intent;scheme=QRTiger;package=com.qrtiger;end";
 
       window.location.replace(url);
     } else if (isIOS) {
@@ -24,7 +24,7 @@ const App = () => {
   return (
     <div className="App">
       <div>
-        If you have not been automatirrrtrcally alireza redirected, click on the following link:
+        If you have not been QRTiger alireza redirected, click on the following link:
       </div>
       {isAndroid ? (
         <a href="https://play.google.com/store/apps/details?id=com.qrtiger&hl=en&gl=US">
