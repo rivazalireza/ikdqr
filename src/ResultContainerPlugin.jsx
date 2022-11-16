@@ -20,13 +20,13 @@ class ResultContainerTable extends React.Component {
         var results = filterResults(this.props.data);
         return (
             <table className={'Qrcode-result-table'}>
-                <thead>
+                {/* <thead>
                     <tr>
                         <td>#</td>
                         <td>Decoded Text</td>
                         <td>Format</td>
                     </tr>
-                </thead>
+                </thead> */}
                 <tbody>
                     {
                         results.map((result, i) => {
@@ -48,7 +48,7 @@ class ResultContainerPlugin extends React.Component {
     render() { 
         let results = filterResults(this.props.results);
         return (<div className='Result-container'>
-                <div className='Result-header'>Scanned results ({results.length})</div>
+                <div className='Result-header'>نتایج اسکن شده ({results.length})</div>
                 <div className='Result-section'>
                     <ResultContainerTable data={this.props.results} />
                 </div>
