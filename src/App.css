@@ -118,9 +118,23 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 24px;
     margin: 4px 2px;
     cursor: pointer;
   }
+  
+  button {
+    text-indent: -9999px;
+    line-height: 0; /* Collapse the original line */
+  }
+  
+  button::after {
+    content: "درخواست مجوز دوربین";
+    text-indent: 0;
+    display: block;
+    line-height: initial; /* New content takes up original line height */
+    
+  }
+
   
   
