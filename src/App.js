@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <header className="App-header">
      
-        <h1>rivazgg</h1>
+        <h1>rivaggzgg</h1>
       </header>
     </div>
   );
